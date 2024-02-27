@@ -1,31 +1,41 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #4F8CFF, #77B5FF);
-    color: white;
+    background-image: url("https://images.pexels.com/photos/3894157/pexels-photo-3894157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    color:white;
+    height:100%;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-nav {
-    background-color: rgba(0, 0, 0, 0.5);
+.navbar {
+    background-image: url("https://images.pexels.com/photos/3894157/pexels-photo-3894157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     padding: 20px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-}
-
-.menu-toggle {
-    display: none;
-    cursor: pointer;
+    color:white;
+    height:100%;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    background-image: url("https://images.pexels.com/photos/3894157/pexels-photo-3894157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    color:white;
+    height:100%;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .menu li {
-    display: inline-block;
     margin-left: 20px;
 }
 
@@ -43,10 +53,18 @@ header {
     padding: 100px 20px;
 }
 
+section {
+    padding: 20px;
+}
+
 footer {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-image:url("https://images.pexels.com/photos/3894157/pexels-photo-3894157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     padding: 20px;
     text-align: center;
+    height:100%;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .social-button {
@@ -58,14 +76,28 @@ footer {
     margin: 0 10px;
 }
 
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
+/* Hamburger menu styles */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
 
+.line {
+    width: 100%;
+    height: 3px;
+    background-image: linear-gradient(to bottom, #4F8CFF, #77B5FF);
+}
+
+@media screen and (max-width: 768px) {
     .menu {
         display: none;
-        background-color: rgba(0, 0, 0, 0.5);
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 10px;
         position: absolute;
         top: 60px;
         right: 0;
@@ -74,6 +106,10 @@ footer {
     }
 
     .menu.active {
-        display: block;
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: flex;
     }
 }
